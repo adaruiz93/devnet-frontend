@@ -10,6 +10,7 @@ const DevList = (props) => {
       console.log('all devs', allDevs)
       const parsed = await allDevs.json()
       console.log('parsed version', parsed)
+      setDevs(parsed)
     } catch (err) {
       console.log(err)
     }
