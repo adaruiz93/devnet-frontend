@@ -12,8 +12,8 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path = '/devnet' render={(routerProps) => <DevList {...routerProps} />} />
-          <Route exact path = '/devnet/:id' render={(routerProps) => <DevDetails {...routerProps} />} />
           <Route exact path = '/devnet/new' render={(routerProps) => <NewDev {...routerProps} />} />
+          <Route exact path = '/devnet/:id' render={(routerProps) => <DevDetails {...routerProps} />} />
           <Route exact path = '/devnet/:id/edit' render={(routerProps) => <EditDev {...routerProps} />} />
         </Switch>
       </Router>
