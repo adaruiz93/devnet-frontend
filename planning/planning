@@ -1,0 +1,15 @@
+# Front End Planning Process
+
+## Setup
+1. Initialize repos and add collaborators
+2. Install on local machines
+3. Organize git workflow and set up branches to be managed by Ada, the git manager
+
+##  Coding Setup
+1. Create repo and file structures
+2. Run npm install
+3. Remove unnecessary default React files
+3. Set up App.js
+4. Create components
+5. Create routes for the components
+6. Add functionality to components connecting to the backend 
