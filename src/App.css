@@ -67,3 +67,12 @@ input[type='submit'] {
 .App-link {
   color: #61dafb;
 }
+
+.list-table {
+  margin-top: 100px;
+}
+
+.card-for-details {
+  display: flex;
+  text-align: center;
+}

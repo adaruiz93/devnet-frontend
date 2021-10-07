@@ -6,10 +6,9 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 const Home = (props) => {
   return (
     <div>
-      <header class="dev-home">
-        <h1 class="dev-header">Welcome to DevNet</h1>
+      <header className="dev-home">
+        <h1 className="dev-header">Welcome to DevNet</h1>
       </header>
-      <body>
         <main>
           <h1>A community for new developers, students, and alumni.</h1>
           <p>
@@ -18,7 +17,6 @@ const Home = (props) => {
         </main>
 
         <Link to = '/devnet'>View All Posts</Link>
-      </body>
     </div>
   )
 }

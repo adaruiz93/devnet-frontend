@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import { Card } from 'react-bootstrap'
 
 const DevDetails = (props) => {
   const currentId = props.match.params.id
@@ -21,16 +22,36 @@ const DevDetails = (props) => {
       loading ? <h3>Loading...</h3> :
         <div>
           <h1>Dev Details For {devs.name}</h1>
-          <p>{devs.name}</p>
-          <p>{devs.role}</p>
-          <p>{devs.company}</p>
-          <p>{devs.questionType}</p>
-          <p>{devs.question}</p>
-          <p>{devs.details}</p>
-          <p>{devs.solution}</p>
-          <p>{devs.tags}</p>
-          <Link to = '/devnet'>Back</Link>
-          <Link to = {`/devnet/${devs._id}/edit`}>Edit</Link>
+          <Card
+            bg='dark'
+            text='white'
+            style={{ width: '50rem' }}
+            className="card-for-details"
+          >
+            <Card.Body>
+              <div className="card-header">
+                <Card.Title>{devs.name}</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">{devs.role}</Card.Subtitle>
+              </div>
+              <Card.Text>
+                <strong>Company:</strong>: {devs.company}
+              </Card.Text>
+              <Card.Text>
+                <strong>{devs.questionType}</strong>: {devs.question}
+              </Card.Text>
+              <Card.Text>
+                <strong>Solution:</strong>: {devs.solution}
+              </Card.Text>
+              <Card.Text>
+                <strong>Comments / Concerns:</strong>: {devs.details}
+              </Card.Text>
+              <Card.Text>
+                <strong>{devs.tags}</strong> 
+              </Card.Text>
+              <Card.Link href='/devnet'>Back</Card.Link>
+              <Card.Link href={`/devnet/${devs._id}/edit`}>Edit</Card.Link>
+            </Card.Body>
+          </Card>
         </div>
     }
     </>
