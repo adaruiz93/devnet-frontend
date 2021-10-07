@@ -20,6 +20,7 @@ const NewDev = (props) => {
   }
 
   const newDev = async(data) => {
+    console.log('newDev')
     try {
       const config = {
         method: 'POST',

@@ -37,13 +37,16 @@ const EditDev = (props) => {
         'Content-Type': 'application/json'
       }
     }
-    const updateDev = await fetch(`http:localhost:9000/devnet/${id}`, config)
+
+    console.log(config)
+    const updateDev = await fetch(`http://localhost:9000/devnet/${id}`, config)
     const parsed = await updateDev.json()
     props.history.push(`/devnet/${id}`)
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log('handleSubmit')
     const {name, role, company, questionType, question, details, solution, tags} = input
     const devData = {name, role, company, questionType, question, details, solution, tags}
     updateDev(input._id, devData)
