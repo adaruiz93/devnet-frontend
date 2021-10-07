@@ -4,15 +4,34 @@
   text-align: center;
 }
 body {
-  display: flex;
   text-align: center;
 }
 div {
   text-align: center;
 }
 main {
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 75%;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 25%;
+  margin-top: 40px;
+}
+label {
+  padding: 10px;
+}
+input[type='submit'] {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
 .dev-home {
   display: flex;
   justify-content: center;
