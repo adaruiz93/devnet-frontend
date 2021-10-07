@@ -4,10 +4,14 @@
   text-align: center;
 }
 body {
+  display: flex;
   text-align: center;
 }
 div {
   text-align: center;
+}
+main {
+  max-width: 600px;
 }
 .dev-home {
   display: flex;
