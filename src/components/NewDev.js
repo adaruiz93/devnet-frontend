@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Row, Col, Form, Navbar, Container, Nav } from 'react-bootstrap';
 
 
 const NewDev = (props) => {
@@ -44,35 +46,38 @@ const NewDev = (props) => {
   }
 
   return (
-    <div>
+    <div class="new-form">
+
       <form onSubmit = {handleSubmit}>
-        <label htmlFor = "name">name</label>
+        <label htmlFor = "name">Name:</label>
         <input id = "name" name = "name" value = {input.name} onChange = {handleChange} />
 
-        <label htmlFor = "role">role</label>
+        <label htmlFor = "role">Role:</label>
         <input id = "role" name = "role" value = {input.role} onChange = {handleChange} />
 
-        <label htmlFor = "company">company</label>
+        <label htmlFor = "company">Company:</label>
         <input id = "company" name = "company" value = {input.company} onChange = {handleChange} />
 
-        <label htmlFor = "questionType">questionType</label>
+        <label htmlFor = "questionType">Behavioral or Technical:</label>
         <input id = "questionType" name = "questionType" value = {input.questionType} onChange = {handleChange} />
 
-        <label htmlFor = "question">question</label>
+        <label htmlFor = "question">Question:</label>
         <input id = "question" name = "question" value = {input.question} onChange = {handleChange} />
 
-        <label htmlFor = "details">details</label>
+        <label htmlFor = "details">Details:</label>
         <input id = "details" name = "details" value = {input.details} onChange = {handleChange} />
 
-        <label htmlFor = "solution">solution</label>
+        <label htmlFor = "solution">Solution:</label>
         <input id = "solution" name = "solution" value = {input.solution} onChange = {handleChange} />
 
-        <label htmlFor = "tags">tags</label>
+        <label htmlFor = "tags">Tags:</label>
         <input id = "tags" name = "tags" value = {input.tags} onChange = {handleChange} />
 
         <input type = 'submit' value = 'Create A Post' />
       </form>
       <Link to = '/devnet'>View Posts</Link>
+
+
     </div>
   )
 }

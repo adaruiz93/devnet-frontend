@@ -24,7 +24,7 @@ const DevList = (props) => {
       const deleteDev = await fetch(`http://localhost:9000/devnet/${id}`, config)
       const parsed = await deleteDev.json()
       const updatedDev = devs.filter(dev => dev._id !== parsed._id)
-      setDevs(updatedDev) 
+      setDevs(updatedDev)
     } catch (err) {
       console.log(err)
     }
@@ -36,6 +36,7 @@ const DevList = (props) => {
 
   return (
     <div>
+    <main>
       <table>
         <thead>
           <tr>
@@ -67,6 +68,7 @@ const DevList = (props) => {
         </tbody>
       </table>
       <Link to='/devnet/new'>Create New Post</Link>
+      </main>
     </div>
   )
 }
